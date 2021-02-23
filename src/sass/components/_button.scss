@@ -1,0 +1,21 @@
+.btn {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  padding: 0 1rem;
+  font-size: inherit;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+
+  &--primary {
+    background-color: rgba(238, 130, 238, 0.267);
+  }
+
+  i {
+    margin-right: 0.4rem;
+  }
+}

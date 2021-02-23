@@ -1,0 +1,97 @@
+$appbar-height: 5rem;
+$menu-width: 24rem;
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $appbar-height;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.288);
+}
+
+.appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $appbar-height;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  padding: 0 2rem;
+}
+
+.menu {
+  position: fixed;
+  top: $appbar-height;
+  left: 0;
+  width: $menu-width;
+  z-index: 50;
+
+  height: 100vh;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin-top: 2rem;
+
+    &__item {
+      a,
+      button {
+        display: flex;
+        width: 100%;
+        border: none;
+        align-items: center;
+        padding: 1.3rem 3rem;
+        text-decoration: none;
+        background-color: transparent;
+        cursor: pointer;
+        outline: none;
+        font-size: inherit;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+        &.active {
+          color: var(--color-text-white);
+          background: linear-gradient(to right bottom, var(--color-primary), var(--color-seccondary));
+        }
+
+        i,
+        i::before {
+          color: inherit;
+          font-size: 2.2rem;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  margin-left: $menu-width;
+  margin-top: $appbar-height;
+}
+
+.content {
+  padding: 2rem;
+  min-height: 70vh;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  margin-top: 10rem;
+}

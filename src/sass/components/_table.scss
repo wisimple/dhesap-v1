@@ -1,0 +1,39 @@
+.table-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  @extend .hide-scrollbar;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+
+  & caption {
+    text-align: left;
+    padding-bottom: 1rem;
+  }
+
+  thead tr {
+    border-bottom: 1px solid black;
+  }
+
+  & td,
+  & th {
+    padding: 0.8rem 0.4rem;
+    text-align: right;
+  }
+
+  & td:first-child,
+  & th:first-child {
+    text-align: left;
+  }
+
+  & tr:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  & tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
